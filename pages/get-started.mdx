@@ -1,0 +1,58 @@
+# Getting started
+
+For installation guides, you can review our `react` and `vue` section. This section presents a general overview about what is inside.
+
+```ts
+const editor = new Editor('my_editor_container')
+```
+
+## Editor
+
+Editor contains all modules for creating design editors. From creating objects to exporting design to JSON/PNG.
+
+## Objects
+
+Objects are editable elements on the canvas. Objects share common properties, specific properties for each object is contained inside `metadata`.
+
+- Text
+- Image
+- Vector
+- Path
+
+```ts
+interface CommonProps {
+  id: string
+  name: string
+  top: number
+  left: number
+  width: number
+  height: number
+  opacity: number
+  scaleX: number
+  scaleY: number
+  stroke: string
+  strokeWidth: number
+  angle: number
+  flipX: boolean
+  flipY: boolean
+  shadow: Shadow
+  visible: boolean
+}
+```
+
+Any of these properties can be edited for each object. Objects can be edited using editor controllers.
+
+## Controllers
+
+Controllers exposes all features avalable in the editor. It allow you to manipulate obects in the canvas, but also the canvas itself. Everything is configurable using the controllers.
+
+- canvas
+- Frame
+- [Objects](/objects/text)
+- zoom
+- history
+- design
+- utils
+- shorcuts
+- events
+- guidelines

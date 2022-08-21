@@ -1,0 +1,74 @@
+# Layehub SDK for React
+
+React wrapper for Layehub SDK. It allows integration with react using react modern features. It uses React Context API.
+
+Applications using Layehub SDK for React:
+
+- [kittl Design Editor](https://github.com/cioun/kittl-editor)
+- [Rect Design Editor](https://github.com/cioun/kittl-editor)
+
+## Installing SDK
+
+SDk for React is available on npm as `@layerhub-io/react`. This single package contains all components for layehub components.
+
+With NPM:
+
+```bash
+npm i @layerhub-io/react
+```
+
+With Yarn:
+
+```bash
+yarn add @layerhub-io/react
+```
+
+With PNPM:
+
+```bash
+npm i @layerhub-io/react
+```
+
+`@layerhub-io/react` ships with typescript support. No additional packages are needed,
+
+## Adding layehub to your application
+
+In order to use Layehub, you need to do a small setup and wrap the root of your application with `Provider` component:
+
+```tsx
+// Provider.ts
+import React from 'react'
+import { Provider } from '@layerhub-io/react'
+
+export default function ({ children }: { children: React.ReactNode }) {
+  return (
+    <Provider>
+      // Other providers
+      {children}
+    </Provider>
+  )
+}
+```
+
+Then, you can start using layehub canvas in your application:
+
+```tsx
+// Provider.ts
+import React from 'react'
+import { Canvas } from '@layerhub-io/react'
+
+export default function ({ children }: { children: React.ReactNode }) {
+  return (
+    <div style={{ height: '600px', width: '600px', display: 'flex' }}>
+      <Canvas />
+    </div>
+  )
+}
+```
+
+import Callout from 'nextra-theme-docs/callout'
+
+<Callout>
+  Make sure Canvas is wrapped by a flexible container. It will provider some
+  responsive functionalites.
+</Callout>

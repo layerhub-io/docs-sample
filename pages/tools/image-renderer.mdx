@@ -1,0 +1,27 @@
+# Image Renderer
+
+## Installation
+
+```bash
+pnpm i @layerhub-io/tools
+```
+
+## Usage
+
+```ts
+import { ImageRenderer } from '@layerhub-io/renderer'
+
+const imageRenderer = new ImageRenderer({
+  token: 'tok_1nd219u21h120dh1llsmz9sK',
+  url: 'https://renderer.layehub.dev',
+})
+
+async function playground(params: type) {
+  const resource = await imageRenderer.render({
+    template: {},
+    params: {},
+  })
+}
+
+playground()
+```

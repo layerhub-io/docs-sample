@@ -1,0 +1,74 @@
+# Hooks
+
+## useEditor
+
+Main hook which returns an instance of the editor. It gives you access to all features.
+
+```tsx
+import React from 'react'
+import { useEditor } from '@layerhub-io/react'
+
+function Sidebar() {
+  const editor = useEditor()
+
+  const addObject = () => {
+    if (editor) {
+      editor.objects.add(options)
+    }
+  }
+  return <Box></Box>
+}
+```
+
+## useZoomRatio
+
+Hook which returns current zoomRatio.
+
+```tsx
+import React from 'react'
+import { useZoomRatio } from '@layerhub-io/react'
+
+function Sidebar() {
+  const zoomRatio = useZoomRatio()
+  return <Box>{zoomRatio}</Box>
+}
+```
+
+## useFrame
+
+
+Hook which returns current zoomRatio.
+
+```tsx
+import React from 'react'
+import { useZoomRatio } from '@layerhub-io/react'
+
+function Sidebar() {
+  const zoomRatio = useZoomRatio()
+  return <Box>{zoomRatio}</Box>
+}
+```
+
+## useObjects
+
+```tsx
+import React from 'react'
+import { useObjects } from '@layerhub-io/react'
+
+function Sidebar() {
+  const objects = useObjects()
+  return <Box>{zoomRatio}</Box>
+}
+```  
+
+## useActiveObject
+
+```tsx
+import React from 'react'
+import { useActiveObject } from '@layerhub-io/react'
+
+function Sidebar() {
+  const activeObject = useActiveObject()
+  return <Box></Box>
+}
+```

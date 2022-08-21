@@ -1,0 +1,26 @@
+# AI Importer
+
+## Installation
+
+```bash
+pnpm i @layerhub-io/renderer
+```
+
+## Usage
+
+```ts
+import { TemplateImporter } from '@layerhub-io/renderer'
+
+const templateImporter = new TemplateImporter({
+  token: 'tok_1nd219u21h120dh1llsmz9sK',
+  url: 'https://renderer.layehub.dev',
+})
+
+async function playground(params: type) {
+  const resource = await templateImporter.import({
+    file: 'path/to/file.ai',
+  })
+}
+
+playground()
+```
